@@ -6,6 +6,7 @@
 body {
   background-color: black;
   color: #fff;
+  overflow: scroll;
 }
 
 .banner {
@@ -63,7 +64,7 @@ body {
 
 .content h1 {
   font-size: 70px;
-  margin-top: 80px;
+  margin-top: -250px;
   text-decoration: underline;
 }
 
@@ -113,6 +114,73 @@ footer {
   padding: 3px;
   background-color: rgb(229, 140, 72);
   color: white;
+}
+table, td{
+  text-align: center; 
+  width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  color: white;
+  padding: 20px;
+}
+.columnHeader{
+  text-align: center;
+  border: 1px solid;
+  color: white;
+  padding: 20px;
+}
+table img{
+  width: 600px;
+  height: auto;
+  margin-top: 0px;
+  filter: grayscale(100%);
+}
+.container {
+  position: relative;
+  width: 100%;
+}
+.image {
+  width: 100%;
+  height: auto;
+}
+.overlay {
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  background-color: grey;
+  overflow: hidden;
+  width: 100%;
+  height: 99%;
+  transform: scale(0);
+  transition: .3s ease;
+}
+.container:hover .overlay {
+  transform: scale(1);
+  opacity: 70%;
+}
+.overlay-text {
+  color: white;
+  font-size: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#click {
+  text-decoration: none;
+}
+#map {
+  width: 27vw;
+  height: 35vh;
+  border-radius: 15px;
+  border-color: #FE5F55;
+  border-width: thick;
+  margin-left: 36vw;
+  margin-right: auto;
+  margin-bottom: 25px;
+  padding: 0px;
 }
 
 @media (max-width: 900px) {
