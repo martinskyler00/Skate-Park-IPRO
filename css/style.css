@@ -62,9 +62,9 @@ body {
   color: #fff;
 }
 
-.content h1 {
+.content header {
   font-size: 70px;
-  margin-top: -250px;
+  /* margin-top: 250px; */
   text-decoration: underline;
 }
 
@@ -115,6 +115,8 @@ footer {
   background-color: rgb(229, 140, 72);
   color: white;
 }
+
+/* Landing page image links and effects */
 table, td{
   text-align: center; 
   width: 100%;
@@ -127,10 +129,9 @@ table, td{
   text-align: center;
   border: 1px solid;
   color: white;
-  padding: 20px;
 }
 table img{
-  width: 600px;
+  width: 23vw;
   height: auto;
   margin-top: 0px;
   filter: grayscale(100%);
@@ -168,6 +169,7 @@ table img{
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 #click {
   text-decoration: none;
 }
