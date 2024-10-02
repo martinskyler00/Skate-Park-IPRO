@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <title>GoGo's Skate Park</title>
+    <!-- Map Links -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+   
+    <link rel="stylesheet" href="css/style.css" />
+    <script async src="js/script.js"></script>
+    
+    </head>
+  <body>
+    <div class="banner"> 
+      <!-- Navigation Banner, holds hyperlinks for site tabs -->
+      <nav class="nav">
+        <div class="logo">
+          <a href="index.html"><img class="logo" src="images/logogo-txt.png"/></a>
+        </div>
+        <a href="#" class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <ul name="nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="involved.html">Get Involved</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content"> 
+      <!-- Page Title -->
+      <header><strong>Welcome to GoGo's Skate Park!</strong></header>
+    </div>
+    <div>
+      <table>
+        <tr>
+          <td>
+            <div class="container">
+              <img src="images/about.jpg" alt="About-section-image" />
+              <a href="about.html">
+              <div class="overlay">
+                <div class="overlay-text">About</div>
+              </div>
+            </a>
+          </div>
+        </td>
+        <td>
+          <div class="container">
+            <img src="images/events.jpg" alt="Event section image" />
+            <a href="events.html">
+              <div class="overlay">
+                <div class="overlay-text">Events</div>
+              </div>
+            </a>
+          </div>
+        </td>
+        <td>
+          <div class="container">
+            <img src="images/involved.jpg" alt="Get Involved section image" />
+            <a href="involved.html">
+              <div class="overlay">
+                <div class="overlay-text">Get Involved</div>
+              </div>
+            </a>
+          </div>
+        </td>
+        <td>
+          <div class="container">
+            <img src="images/gallery.jpg" alt="Gallery section image" />
+            <a href="gallery.html">
+              <div class="overlay">
+                <div class="overlay-text">Gallery</div>
+              </div>
+            </a>
+          </div>
+        </td>
+        </tr>
+      </table>
+    </div>
+    <div id="map">
+      <script>
+        var map = L.map('map').setView([80.6498333, -175.2796667], 5);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
+          attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var marker = L.marker([80.6498333, -175.2796667]).addTo(map);
+        //<!-- 84°38'59.4"N 175°16'46.8"W -->
+        //marker.bindPopup("<b>Illinois Institute of Technology</b>").openPopup();
+        //L.circle([50.5, 30.5], {radius: 200}).addTo(map);
+      </script>      
+      <h4>Find us on Google!</h4>
+    </div>
+    <h2>A place to GoGo to your Dreams!</h2>
+    <div class="grid">
+      <div>
+        <!-- <img 
+         src="images/IMG_0318.png" 
+         alt="The logo of GoGo's Skate Park depicting a bugbear, outlining 'GoGo' in the linework."
+         /> -->
+      </div>
+      <div>
+        <p>
+          We believe in giving everyone a chance to try new things here at GoGo's Skate Park 
+          and welcome friends from any experience level. There will always be
+          chances to learn new things and grow in our park.
+        </p>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Connect with Us!
+      </p>
+    </footer>
+  </body>
+</html>
