@@ -85,13 +85,14 @@
     </div>
     <div id="map">
       <script>
-        var map = L.map('map').setView([6.99182039288997, -161.8592678816402], 2);
+        var map = L.map('map').setView([80.6498333, -175.2796667], 5);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
-        var marker = L.marker([6.99182039288997, -161.8592678816402]).addTo(map);
+        var marker = L.marker([80.6498333, -175.2796667]).addTo(map);
+        //<!-- 84°38'59.4"N 175°16'46.8"W -->
         //marker.bindPopup("<b>Illinois Institute of Technology</b>").openPopup();
-        L.circle([50.5, 30.5], {radius: 200}).addTo(map);
+        //L.circle([50.5, 30.5], {radius: 200}).addTo(map);
       </script>      
       <h4>Find us on Google!</h4>
     </div>
