@@ -9,6 +9,7 @@ body {
   overflow: scroll;
 }
 
+/* Banner Background */
 .banner {
   width: 100%;
   height: 80vh;
@@ -17,6 +18,14 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+
+.logo {
+  width: 135px;
+  cursor: pointer;
+}
+
+/* Navigation Bar */
 .nav {
   width: 85%;
   margin: auto;
@@ -24,10 +33,6 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-.logo {
-  width: 135px;
-  cursor: pointer;
 }
 .nav ul li {
   list-style: none;
@@ -53,6 +58,8 @@ body {
 .nav ul li:hover:after {
   width: 100%;
 }
+
+/* Page Heading */
 .content {
   width: 100%;
   position: absolute;
@@ -61,13 +68,11 @@ body {
   text-align: center;
   color: #fff;
 }
-
-.content h1 {
+.content header {
   font-size: 70px;
-  margin-top: -250px;
+  /* margin-top: 250px; */
   text-decoration: underline;
 }
-
 h2 {
   text-align: center;
   font-size: 45px;
@@ -85,6 +90,7 @@ p {
   font-family: "Times New Roman", Times, serif;
 }
 
+/* Unfinnished hamburger menu */
 .hamburger {
   position: absolute;
   top: 1rem;
@@ -101,6 +107,8 @@ p {
   background-color: #fff;
   border-radius: 10px;
 }
+
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -115,7 +123,9 @@ footer {
   background-color: rgb(229, 140, 72);
   color: white;
 }
-table {
+
+/* Landing page image links and effects */
+table, td{
   text-align: center; 
   width: 100%;
   table-layout: fixed;
@@ -124,6 +134,7 @@ table {
   padding: 20px;
   overflow-x: auto;
 }
+
 td{
   font-size: 20px;
   border: 2px solid;
@@ -136,6 +147,14 @@ td{
 }
 table img{
   width: 100%;
+
+.columnHeader{
+  text-align: center;
+  border: 1px solid;
+  color: white;
+}
+table img{
+  width: 23vw;
   height: auto;
   margin-top: 0px;
   filter: grayscale(100%);
@@ -178,6 +197,48 @@ table img{
   text-align: center;
 }
 
+#click {
+  text-decoration: none;
+}
+
+/* Map */
+#map {
+  width: 27vw;
+  height: 35vh;
+  border-radius: 15px;
+  border-color: #FE5F55;
+  border-width: thick;
+  margin-left: 36vw;
+  margin-right: auto;
+  margin-bottom: 25px;
+  padding: 0px;
+}
+
+/* Photo Gallery */
+.gallery {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 10px;
+}
+.gallery img {
+  width: 100%;
+  height: 200px; 
+  padding: 5px;
+  background: #fff;
+  object-fit: contain;
+}
+.gallery img:hover {
+  z-index: 2;
+  transform: scale(1.25);
+  /* linear | ease | ease-in | ease-out | ease-in-out */
+  transition: transform ease 0.4s;
+}
+
 @media (max-width: 900px) {
   .hamburger {
     display: flex;
@@ -202,5 +263,9 @@ table img{
 
   .nav ul .active {
     display: flex;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
