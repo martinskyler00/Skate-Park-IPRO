@@ -8,7 +8,6 @@ body {
   color: #fff;
   overflow: scroll;
 }
-
 /* Banner Background */
 .banner {
   width: 100%;
@@ -18,13 +17,10 @@ body {
   background-size: cover;
   background-position: center;
 }
-
-
 .logo {
   width: 135px;
   cursor: pointer;
 }
-
 /* Navigation Bar */
 .nav {
   width: 85%;
@@ -58,7 +54,6 @@ body {
 .nav ul li:hover:after {
   width: 100%;
 }
-
 /* Page Heading */
 .content {
   width: 100%;
@@ -89,7 +84,6 @@ p {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
 }
-
 /* Unfinnished hamburger menu */
 .hamburger {
   position: absolute;
@@ -107,8 +101,6 @@ p {
   background-color: #fff;
   border-radius: 10px;
 }
-
-
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -116,14 +108,12 @@ p {
   justify-content: center;
   align-items: center;
 }
-
 footer {
   text-align: center;
   padding: 3px;
   background-color: rgb(229, 140, 72);
   color: white;
 }
-
 /* Landing page image links and effects */
 table, td{
   text-align: center; 
@@ -165,6 +155,7 @@ table img{
   margin-top: 40px;
 }
 .container {
+  position: relative;
   width: 100%;
   height: auto;
 }
@@ -174,21 +165,26 @@ table img{
 }
 .overlay {
   position: absolute;
+  bottom: 4px;
   bottom: 0;
   left: 0;
   right: 0;
+  background-color: grey;
   background-color: #008CBA;
   overflow: hidden;
   width: 100%;
+  height: 99%;
   height: 100%;
   transform: scale(0);
   transition: .3s ease;
 }
 .container:hover .overlay {
   transform: scale(1);
+  opacity: 70%;
 }
 .overlay-text {
   color: white;
+  font-size: 50px;
   font-size: 20px;
   position: absolute;
   top: 50%;
@@ -200,7 +196,6 @@ table img{
 #click {
   text-decoration: none;
 }
-
 /* Map */
 #map {
   width: 27vw;
@@ -213,7 +208,6 @@ table img{
   margin-bottom: 25px;
   padding: 0px;
 }
-
 /* Photo Gallery */
 .gallery {
   box-sizing: border-box;
@@ -238,7 +232,6 @@ table img{
   /* linear | ease | ease-in | ease-out | ease-in-out */
   transition: transform ease 0.4s;
 }
-
 @media (max-width: 900px) {
   .hamburger {
     display: flex;
@@ -260,11 +253,9 @@ table img{
   .nav ul li a {
     padding: 0.5rem 1rem;
   }
-
   .nav ul .active {
     display: flex;
   }
-
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
