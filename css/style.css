@@ -140,6 +140,7 @@ table, td{
 }
 table img{
   width: 23vw;
+  border-radius: 15px;
   height: auto;
   margin-top: 0px;
   filter: grayscale(100%);
