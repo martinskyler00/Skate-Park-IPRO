@@ -1,13 +1,23 @@
+/* Color Scheme
+ * Dark Brown: #794a34
+ * Red: #dd5341
+ * Peach: #f57f5b
+ * daffodil: #faca78
+ * teal: #68c7c1  
+ * cream: #f5eace 
+ */
+
 * {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
 }
 body {
-  background-color: black;
-  color: #fff;
+  background-color: #000000;
+  color: #000000;
   overflow: scroll;
 }
+
 /* Banner Background */
 .banner {
   width: 100%;
@@ -21,6 +31,7 @@ body {
   width: 135px;
   cursor: pointer;
 }
+
 /* Navigation Bar */
 .nav {
   width: 85%;
@@ -54,8 +65,9 @@ body {
 .nav ul li:hover:after {
   width: 100%;
 }
+
 /* Page Heading */
-.content {
+.pageTitle {
   width: 100%;
   position: absolute;
   top: 50%;
@@ -63,7 +75,7 @@ body {
   text-align: center;
   color: #fff;
 }
-.content header {
+.pageTitle header {
   font-size: 70px;
   /* margin-top: 250px; */
   text-decoration: underline;
@@ -72,7 +84,7 @@ h2 {
   text-align: center;
   font-size: 45px;
 }
-.content p {
+.pageTitle p {
   margin: 20px auto;
   font-weight: 100;
   line-height: 25px;
@@ -84,6 +96,7 @@ p {
   text-align: center;
   font-family: "Times New Roman", Times, serif;
 }
+
 /* Unfinnished hamburger menu */
 .hamburger {
   position: absolute;
@@ -101,19 +114,21 @@ p {
   background-color: #fff;
   border-radius: 10px;
 }
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5em;
-  justify-content: center;
-  align-items: center;
+
+/* content container */
+.content{
+  background: #f5eace;
+  margin: 0px 50px 0px 50px;
+  padding: 20px;
 }
-footer {
-  text-align: center;
-  padding: 3px;
-  background-color: rgb(229, 140, 72);
-  color: white;
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 10px;
+  padding: 10px;
 }
+
 /* Landing page image links and effects */
 table, td{
   text-align: center; 
@@ -122,22 +137,7 @@ table, td{
   border-collapse: collapse;
   color: white;
   padding: 20px;
-  overflow-x: auto;
 }
-
-td{
-  font-size: 20px;
-  border: 2px solid;
-  border-color: black;
-}
-.table-design{
-  width: 100%;
-  table-layout: fixed;
-  height: auto;
-}
-table img{
-  width: 100%;
-
 .columnHeader{
   text-align: center;
   border: 1px solid;
@@ -147,22 +147,23 @@ table img{
   width: 23vw;
 table img {
   width: 100%;
+  border-radius: 15px;
   height: auto;
   max-width: 600px;
   margin-top: 0;
   filter: grayscale(100%);
 }
-.content h1{
-  text-align: center;
-  padding: 30px;
-  margin-top: 40px;
-}
 .container {
   position: relative;
+  width: 100%;
+}
+.container img {
   width: 100%;
   height: auto;
   max-width: 600px;
   overflow: hidden;
+  max-width: 100%;
+  filter: grayscale(100%);
 }
 .image {
   width: 100%;
@@ -170,12 +171,11 @@ table img {
 }
 .overlay {
   position: absolute;
-  bottom: 4px;
-  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
-  background-color: grey;
-  background-color: #008CBA;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background for better visibility */
   overflow: hidden;
   width: 100%;
   height: 99%;
@@ -184,6 +184,12 @@ table img {
   height: 100%;
   transform: scale(0);
   transition: 0.3s ease;
+  height: 100%;
+  transform: scale(0);
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .container:hover .overlay {
@@ -191,18 +197,13 @@ table img {
 }
 .overlay-text {
   color: white;
-  font-size: 50px;
-  font-size: 20px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 2em;
   text-align: center;
 }
-
 #click {
   text-decoration: none;
 }
+
 /* Map */
 #map {
   width: 27vw;
@@ -215,13 +216,18 @@ table img {
   margin-bottom: 25px;
   padding: 0px;
 }
+/* Hours of Service */
+#HoS ul li{
+  list-style: none;
+
+}
+
 /* Photo Gallery */
 .gallery {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  grid-gap: 30px;
-  max-width: 1000px;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   margin: 0 auto;
   overflow: hidden;
   padding: 10px;
@@ -239,6 +245,14 @@ table img {
   /* linear | ease | ease-in | ease-out | ease-in-out */
   transition: transform ease 0.4s;
 }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: #f57f5b;
+  color: white;
+}
+
 @media (max-width: 900px) {
   .hamburger {
     display: flex;
@@ -260,9 +274,11 @@ table img {
   .nav ul li a {
     padding: 0.5rem 1rem;
   }
+
   .nav ul .active {
     display: flex;
   }
+
   .gallery {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -277,3 +293,16 @@ table img {
     height: auto;
   }
 }
+
+  @media (max-width: 768px) {
+    table, td {
+      display: block;
+      width: 100%;
+    }
+  
+    .container img {
+      width: 100%; /* Full width on smaller screens */
+    }
+  }
+}
+
