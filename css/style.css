@@ -85,7 +85,7 @@ h2 {
   font-size: 45px;
 }
 h3, li{
-  color: beige;
+  color: #794a3a;
   margin: 15px;
 }
 .pageTitle p {
@@ -95,7 +95,7 @@ h3, li{
 }
 p {
   margin: 15px;
-  color: beige;
+  color: #794a3a;
 }
 .spacer {
   text-align: center;
