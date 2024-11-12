@@ -233,6 +233,17 @@ table img{
   padding: 20px;
 }
 
+/* Events */
+#eventIntro{
+  text-align: center;
+  font-size: larger;
+  margin: 20px;
+}
+.event-container table{
+  table-layout: fixed;
+  width: 100%;
+  background-color: #67c3b3;
+}
 /* Get Involved */
 
 
