@@ -78,7 +78,6 @@ body {
   color: #fff;
 }
 .pageTitle header {
-  
   font-family: 'Shrikhand', serif;
   font-weight: 400;
   font-style: normal;
@@ -161,6 +160,8 @@ table img{
   filter: grayscale(100%);
 }
 .container {
+  transform: translateX(-8%);
+
   position: relative;
   width: 22vw; /* Adjust width as needed */
   cursor: pointer;
