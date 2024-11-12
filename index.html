@@ -86,20 +86,16 @@
       </div>
   
       <!-- text section -->
-      <div class="flex-container">
-        <h2 >A place to GoGo to your Dreams!</h2>
-        <div >
-          <p>
-            We believe in giving everyone a chance to try new things here at GoGo's Skate Park 
-            and welcome friends from any experience level. There will always be
-            chances to learn new things and grow in our park.
-          </p>
-        </div>
-      </div>
-      <div  class="flex-container">
-        <div id="HoS">
-          <h3>Hours of Service</h3>
-          <ul>
+      <div class="grid-container">
+        <h2  id="dreams">A place to GoGo to your Dreams!</h2>
+        <p id="par">
+          We believe in giving everyone a chance to try new things here at GoGo's Skate Park 
+          and welcome friends from any experience level. There will always be
+          chances to learn new things and grow in our park.
+        </p>
+        <div class="grid-container">
+          <ul class="HoS">
+            <li><strong>Hours of Service</strong></li>
             <li>Monday: 9am - 7pm</li>
             <li>Tuesday: 9am - 7pm</li>
             <li>Wednesday: 9am - 7pm</li>
@@ -109,21 +105,19 @@
             <li>Sunday: 9am - 7pm</li>
           </ul>
         </div>
-        <div id="map">
+      </div>
+      <!-- <div  class="grid-container">
+        <div class="map">
           <script>
             var map = L.map('map').setView([80.6498333, -175.2796667], 5);
             L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { 
               attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             }).addTo(map);
             var marker = L.marker([80.6498333, -175.2796667]).addTo(map);
-            //<!-- 84°38'59.4"N 175°16'46.8"W -->
-            //marker.bindPopup("<b>Illinois Institute of Technology</b>").openPopup();
-            //L.circle([50.5, 30.5], {radius: 200}).addTo(map);
           </script>      
           <h3 >Find us on Google!</h3>
         </div>
-        
-      </div>
+      </div> -->
     </div>
     <!-- image links -->
     

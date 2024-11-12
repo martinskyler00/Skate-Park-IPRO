@@ -13,6 +13,7 @@
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  font-size: large;
 }
 body {
   background-color: #000000;
@@ -23,7 +24,7 @@ body {
 /* Banner Background */
 .banner {
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/pexels-zachtheshoota-1769553.jpg);
   background-size: cover;
@@ -73,7 +74,7 @@ body {
   width: 100%;
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(-80%);
   text-align: center;
   color: #fff;
 }
@@ -102,23 +103,6 @@ p {
   font-family: "Times New Roman", Times, serif;
 }
 
-/* Unfinnished hamburger menu */
-.hamburger {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 21px;
-}
-.hamburger .bar {
-  height: 3px;
-  width: 100%;
-  background-color: #fff;
-  border-radius: 10px;
-}
 
 /* content container */
 .content{
@@ -127,11 +111,25 @@ p {
   padding: 20px;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: nowrap;
-  margin: 10px;
-  padding: 10px;
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.grid-container  #dreams{
+  grid-column: 1 / span 1;
+}
+.grid-container p{
+  grid-column: 1 / span 1;
+  transform: translateY(-50%);
+  font-size: large;
+}
+.grid-container .HoS{
+  grid-column: 1 / span 1;
+  list-style: none;
+  transform:translate(50%, -20%);
 }
 
 /* Landing page image links and effects */
@@ -159,14 +157,14 @@ table img{
   margin-top: 0;
   filter: grayscale(100%);
 }
-.container {
-  transform: translateX(-8%);
 
+/* home page image link container */
+.container { 
+  transform: translateX(-8%);
   position: relative;
   width: 22vw; /* Adjust width as needed */
   cursor: pointer;
 }
-
 .container img {
   width: 100%;
   height: auto;
@@ -199,7 +197,6 @@ table img{
   transition: opacity 0.3s ease;
   border-radius: 15px;
 }
-
 .container:hover .overlay {
   opacity: 1; /* Show on hover */
 }
@@ -218,23 +215,15 @@ table img{
   text-decoration: none;
 }
 
-/* Map */
-#map {
-  width: 27vw;
-  height: 35vh;
-  border-radius: 15px;
-  border-color: #FE5F55;
-  border-width: thick;
-  margin-left: 36vw;
-  margin-right: auto;
-  margin-bottom: 25px;
-  padding: 0px;
-}
-/* Hours of Service */
-#HoS ul li{
-  list-style: none;
+/* About Us */
 
+.flex-container{
+  
 }
+
+
+/* Get Involved */
+
 
 /* Photo Gallery */
 .gallery {
@@ -268,10 +257,7 @@ footer {
 }
 
 @media (max-width: 900px) {
-  .hamburger {
-    display: flex;
-    padding: 35px;
-  }
+  
   .nav {
     flex-direction: column;
     align-items: flex-start;
