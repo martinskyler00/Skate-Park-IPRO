@@ -216,11 +216,22 @@ table img{
 }
 
 /* About Us */
-
-.flex-container{
-  
+#aboutWelcome{
+  font-size: larger;
+  text-align: center;
+  padding: 20px;
 }
-
+.separatorImg{
+  width: 100%;
+  height: 200px;
+  align-self: center;
+  object-fit: cover;
+}
+.aboutGrid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 20px;
+}
 
 /* Get Involved */
 
