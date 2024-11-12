@@ -262,13 +262,13 @@ table img{
   height: 200px; 
   padding: 5px;
   background: #fff;
-  object-fit: contain;
+  object-fit: cover;
 }
 .gallery img:hover {
   z-index: 2;
-  transform: scale(1.25);
+  transform: scale(1.2);
   /* linear | ease | ease-in | ease-out | ease-in-out */
-  transition: transform ease 0.4s;
+  transition: transform ease-in-out 0.2s;
 }
 
 footer {
